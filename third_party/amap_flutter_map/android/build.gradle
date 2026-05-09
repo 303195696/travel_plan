@@ -1,0 +1,40 @@
+group 'com.amap.flutter.amap_flutter_map'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.amap.flutter.amap_flutter_map'
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    // 使用 implementation，便于作为 Flutter 子工程时把 SDK 传入宿主；宿主 app 仍建议显式 implementation 一次以免遗漏。
+    implementation 'com.amap.api:3dmap:8.1.0'
+}
+
