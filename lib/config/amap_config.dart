@@ -24,9 +24,9 @@ class AmapConfig {
   static const String _webFromEnv = String.fromEnvironment('AMAP_WEB_KEY');
 
   /// 若未使用 dart-define，请修改下面常量为你的 Key（按调试平台填写即可）。
-  static const String _iosLocal = 'bcdc712ea43f46ad4cd3223e7cb30e9f';
-  static const String _androidLocal = '6ab419445f470d79a82a3af7e4a1e864';
-  static const String _webLocal = '8fc0796f26fde5ae76df9b1629ed1f03';
+  static const String _iosLocal = '';
+  static const String _androidLocal = '';
+  static const String _webLocal = '';
 
   static String get iosMapKey =>
       (_iosFromEnv.isNotEmpty ? _iosFromEnv : _iosLocal).trim();
